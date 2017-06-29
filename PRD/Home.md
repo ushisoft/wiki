@@ -1,1 +1,1 @@
-[user management](user.md)
+[user management](user)
