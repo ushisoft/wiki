@@ -2,4 +2,4 @@
 
 ## Java
 
-参考阿里[开发手册](Attachment/阿里巴巴Java开发手册(正式版).pdf)
+参考《阿里巴巴Java开发手册(正式版)》，[[https://m.aliyun.com/yunqi/articles/69327]]
