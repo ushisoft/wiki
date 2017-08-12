@@ -444,6 +444,55 @@ Map<String,String> synmap = Collections.synchronizedMap(map);
 
 
 
+### Netty
+
+
+
+### Redis
+
+
+
+### 解决方案
+
+- 两个事务同时进行转账，如何避免
+
+
+- 分布式中的事务问题
+
+
+- 信贷业务中，有授信额度，含公司编号，公司详细信息存储在另一个系统（客户管理系统），如果需要通过公司名称查询授信额度，数据库表怎么设计？
+
+
+- 在分布式架构中，接口调用（涉及多个系统的多个接口交互）提示超时了，如何定位及处理？
+
+  Nginx（或者其他负载）
+
+  网络
+
+  分布式跟踪系统
+
+  尽量详尽的日志
+
+  调优
+
+  异步
+
+
+
+
+### 数据库
+
+Postgres-BDR
+
+Postgres-XL
+
+Apache Ignite
+
+Database Replication
+
+Real-Time Data Warehousing
+
+
 
 ## 架构设计基础
 
