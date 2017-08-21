@@ -246,6 +246,42 @@ Map<String,String> synmap = Collections.synchronizedMap(map);
 
 原理：定义一个类，将集合所有的方法加同一把锁后返回。
 
+#### java.concurrent
+
+CountDownLatch:
+
+并发构造，允许一个或多个线程等待一系列指定操作的完成。
+
+CyclicBarrier:
+
+实现线程同步，是一个所有线程必须等待的一个栅栏，直到所有线程都到达这里，然后所有线程才可以继续做其他事情。
+
+#### NIO
+
+NIO与IO的主要区别。
+
+| IO   | NIO   |
+| ---- | ----- |
+| 面向流  | 面向缓冲  |
+| 阻塞IO | 非阻塞IO |
+| 无    | 选择器   |
+
+
+
+几个核心部分。
+
+- Channels
+- Buffers
+  - flip
+  - capacity
+  - position
+  - limit
+  - clean
+  - compact
+- Selectors
+
+
+
 #### Git相关
 
 
