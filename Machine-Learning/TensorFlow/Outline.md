@@ -120,3 +120,21 @@ sess.run(init_op)
 #### placeholder
 
 feed_dict
+
+#### 损失函数
+
+交叉熵
+
+#### 优化器
+
+常用的有：
+
+GradientDescentOptimizer
+
+AdamOptimizer
+
+MomentumOptimizer
+
+#### 示例
+
+initialize_all_variables -> global_variables_initializer
