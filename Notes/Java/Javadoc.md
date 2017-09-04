@@ -18,7 +18,7 @@
           <artifactId>umlgraph</artifactId>
           <version>5.6.6</version>
         </docletArtifact>
-        <additionalparam>-views -all</additionalparam>
+        <additionalparam>-views -all -collapsible</additionalparam>
         <useStandardDocletOptions>true</useStandardDocletOptions>
       </configuration>
     </plugin>
@@ -26,7 +26,7 @@
 </build>
 ```
 
-以上配置中有两个关键点：
+### 两个配置关键
 
 1. 官方提供的umlgraph版本只到5.1，需要5.5.8-SNAPSHOT版本，该解决了`Warning, could not find a line that matches the pattern`问题，下载地址：[Link](https://oss.sonatype.org/content/repositories/snapshots/org/umlgraph/umlgraph/5.5.8-SNAPSHOT/)
 
@@ -34,8 +34,18 @@
 
    *** 补充，5.6.6已解决，并提供官方下载。
 
-2. 一定要配置`<locale>en_US</locale>`，否则生成的javadoc中，class关键字会变成“类”，Interface、Enum亦如此，会导致umlgraph无法解析，同样会报`could not find a line that matches the pattern`错误。
+2. 一定要配置`<locale>en_US</locale>`，否则生成的javadoc中，`class`关键字会变成`类`，Interface、Enum亦如此，会导致umlgraph无法解析，同样会报`could not find a line that matches the pattern`错误。
 
+
+### 参数说明
+
+#### -collapsible
+
+折叠，默认不显示UML图，点击`Show UML class diagram`显示。
+
+### 源代码参考
+
+[UMLGraph@github](https://github.com/dspinellis/UMLGraph)
 
 
 ## 安装graphviz
@@ -65,3 +75,5 @@ package说明页还无法关联，提示`Warning, could not find a line that mat
 *** 5.6.6中已解决
 
 注解类（Annotation Type）无法解析。
+
+可生成链接，点击后显示。（在官方有说明） => collapsible参数
