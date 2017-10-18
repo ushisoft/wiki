@@ -2,9 +2,21 @@
 
 ## Java
 
-参考《阿里巴巴Java开发手册(正式版)》，[[https://m.aliyun.com/yunqi/articles/69327]]
+### 阿里开发手册
 
+参考《阿里巴巴Java开发手册(正式版)》，<https://m.aliyun.com/yunqi/articles/69327>
 
+#### 插件项目地址
+
+<https://github.com/alibaba/p3c>
+
+#### 阿里云大学认证
+
+<https://edu.aliyun.com/certification/cldt02?spm=5176.100239.0.0.PkgKeg>
+
+#### 插件安装
+
+- Idea: <https://github.com/alibaba/p3c/tree/master/idea-plugin>
 
 ## Restful API
 
