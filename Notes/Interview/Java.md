@@ -540,7 +540,7 @@ Real-Time Data Warehousing
 
 CAP定律
 
-![CAP](Java-Attachment/CAP.png)
+![CAP](Java/CAP.png)
 
 在分布式系统中，同时满足“CAP定律”中的“一致性”、“可用性”和“分区容错性”三者是不可能的。
 
@@ -548,9 +548,9 @@ CAP定律
 
 ##### 两阶段提交协议
 
-![2PC-1](Java-Attachment/2PC-1.png)
+![2PC-1](Java/2PC-1.png)
 
-![2PC-2](Java-Attachment/2PC-2.jpg)
+![2PC-2](Java/2PC-2.jpg)
 
 ##### 提供回滚接口
 

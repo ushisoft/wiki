@@ -24,6 +24,19 @@ brew常为command line工具，cask多为gui工具。
 
 初始化jenv，添加如下代码到`~/.bash_profile`
 
+Bash
+
+```
+$ echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.bash_profile
+$ echo 'eval "$(jenv init -)"' >> ~/.bash_profile
+```
+
+Zsh
+```
+$ echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
+$ echo 'eval "$(jenv init -)"' >> ~/.zshrc
+```
+
 ```shell
 # Init jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
@@ -59,3 +72,17 @@ Configure shell instance version
 ```
 $ jenv shell oracle64-1.6.0.39
 ```
+
+#### 配合jEnv，maven的java_home设定
+
+新建`～/.mavenrc`，添加如下配置：
+
+```
+JAVA_HOME=$(/usr/libexec/java_home -v $(jenv version-name))
+```
+
+可以达到maven的java版本与jEnv设置的保持一致
+
+## 常用命令
+
+### 
