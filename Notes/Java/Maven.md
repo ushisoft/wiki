@@ -39,3 +39,103 @@ sun.security.pkcs10.PKCS10
 	在此例中也是必须要配置的，是因为maven-compile-plugin会默认忽视所有-XD参数，所有必须使用独立的编译器。
 
 	关于fork的作用参考: <https://maven.apache.org/plugins/maven-compiler-plugin/compile-mojo.html#fork>
+
+## Settings.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <profiles>
+    <profile>
+      <id>wacai</id>
+      <repositories>
+        <repository>
+          <id>wacai-public</id>
+          <url>http://repo.caimi-inc.com/nexus/content/groups/public/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
+        </repository>
+        <repository>
+          <id>wacai-third</id>
+          <url>http://repo.caimi-inc.com/nexus/content/groups/public-third/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>wacai-public</id>
+          <url>http://repo.caimi-inc.com/nexus/content/groups/public/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>wacai-third</id>
+          <url>http://repo.caimi-inc.com/nexus/content/groups/public-third/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+    <profile>
+      <id>personal</id>
+      <repositories>
+        <repository>
+          <id>aliyun-public</id>
+          <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>aliyun-public</id>
+          <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+    <profile>
+      <id>sonar</id>
+      <properties>
+        <sonar.host.url>http://sonarqube.test.wacai.info</sonar.host.url>
+      </properties>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>personal</activeProfile>
+  </activeProfiles>
+</settings>
+```

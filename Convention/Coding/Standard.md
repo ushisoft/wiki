@@ -21,3 +21,7 @@
 ## Restful API
 
 参考：[RESTful API 设计最佳实践 by waylau@yq](https://yq.aliyun.com/articles/47352)
+
+[Github REST API v3](https://developer.github.com/v3/)
+
+[好RESTful API的设计原则](http://www.cnblogs.com/moonz-wu/p/4211626.html)
